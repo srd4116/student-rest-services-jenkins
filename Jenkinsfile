@@ -10,7 +10,7 @@ pipeline {
 	maven 'MAVEN3'		
      }
   options {
-    timeout(time: 5, unit: 'MINUTS')
+    timeout(time: 5, unit: 'MINUTES')
    // timestamps()
     buildDiscarder(logRotator(numToKeepStr: '2'))
   }  
@@ -74,7 +74,7 @@ pipeline {
     			sh ''' ${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=sonaruser -Dsonar.java.binaries=target/classes -Dsonar.sources=.
     			'''
 		}
-		timeout(time: 5, unit: 'MINUTS') {
+		timeout(time: 5, unit: 'MINUTES') {
             waitForQualityGate abortPipeline: true
         }
        echo "Code Analysis Done"
