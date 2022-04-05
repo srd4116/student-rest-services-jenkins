@@ -6,7 +6,7 @@
 pipeline {
   agent any //{ label 'labelname' }
     tools{
-	jdk 'JAVA_HOME8'
+	jdk 'JAVA_HOME'
 	maven 'Local_maven'		
      }
   options {
