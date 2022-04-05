@@ -6,8 +6,8 @@
 pipeline {
   agent any //{ label 'labelname' }
     tools{
-	jdk 'JAVA-JDK1.8'
-	maven 'MAVEN3'		
+	jdk 'JAVA_HOME8'
+	maven 'Local_maven'		
      }
   options {
     timeout(time: 5, unit: 'MINUTES')
